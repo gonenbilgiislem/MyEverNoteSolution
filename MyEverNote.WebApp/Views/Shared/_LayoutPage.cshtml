@@ -17,9 +17,9 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Note : Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">My Evernote</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-heart"></i>  En Beğenilenler</a>
+                        <a class="nav-link" href="#"><i class="fas fa-wrench"></i>  Yönetim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-star"></i>  En Beğenilenler</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -43,26 +46,99 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Note:Arama Kısmı Başlangıç-->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-right">
+
                     <li>
                         <form class="form-inline">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <button class="btn btn-outline-success d-none d-sm-block" type="submit">Search</button>
                         </form>
+                    </li>
+                </ul>
+            </div>
+            <!-- Note:Arama Kısmı Bitiş-->
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Giriş
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user-plus"></i>
+                            Üye Ol
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Çıkış
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div>
         @RenderBody();
-    </div>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark text-center text-white">
+
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>
+                        <strong>
+                            Site Haritası
+                        </strong>
+                    </h5>
+                    <p class="m-0 text-center text-white">
+                        Amet, consectetur adipiscing elit.
+                    </p>
+                    
+                        <a class="nav-link text-white text-center" href="#"><i class="fas fa-star"></i>  En Beğenilenler</a>
+                  
+                        <a class="nav-link text-white text-center" href="#">
+                            <i class="fas fa-list-ul"></i>
+                            Son Yazılanlar
+                        </a>
+                  
+                </div>
+                <div class="col-lg-4">
+                    <h5>
+                        <strong>
+                            MyEverNote
+                        </strong>
+                        <br />
+                    </h5>
+                    <p class="m-0 text-center text-white">Tüm Hakları Saklıkdır &copy; @DateTime.Now.Year</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>
+                        <strong>
+                            E-Bülten Üyeliği
+                        </strong>
+                    </h5>
+                    <p class="m-0 text-left text-white">
+                   Bülten Aboneliği için aşağıdaki kutuya eposta adresinizi giriniz.!
+                    
+                            <form class="form-inline">
+                                <label class="sr-only" for="inlineFormInputName2">Name</label>
+                                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e-posta adresini giriniz">
+
+                                <button type="submit" class="btn btn-primary mb-2">Gönder</button>
+                            </form>
+                    
+                    
+
+                </div>
+            </div>
         </div>
         <!-- /.container -->
     </footer>
