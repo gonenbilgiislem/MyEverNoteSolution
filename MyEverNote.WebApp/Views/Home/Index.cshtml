@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Index";
 }
 
@@ -7,13 +8,7 @@
     <div class="row">
         <!--Kategoriler-->
         <div class="col-lg-3">
-            <h1 class="my-4">Kategoriler</h1>
-            <div class="list-group">
-                <a href="#" class="list-group-item"><i class="fas fa-hand-point-right"></i> Tüm Kategoriler</a>
-                <a href="#" class="list-group-item"><i class="fas fa-hand-point-right"></i> Category 1</a>
-                <a href="#" class="list-group-item"><i class="fas fa-hand-point-right"></i> Category 2</a>
-                <a href="#" class="list-group-item"><i class="fas fa-hand-point-right"></i> Category 3</a>
-            </div>
+            @Html.Partial("_PartialCategories")
         </div>
         <!-- /.col-lg-3 -->
       
@@ -46,236 +41,12 @@
                 </a>
             </div>
             <!--İçerik Yazılar-->
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt=""></a>
-                        <div class="card-header">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Sit amet, consectetur.
-                                </a>
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <i class="fas fa-user"></i> baris.ozen
-                                </li>
-                                <li><i class="fas fa-clock"></i> 03.05.2019 22:12</li>
-                            </ul>
-                            <hr />
-
-                            <p class="card-text">
-                                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted float-left">
-                                <button type="button" class="btn btn-sm btn-outline-danger">
-                                    <i class="far fa-star"></i> <span class="badge badge-light">4</span>
-                                </button>
-                            </small>
-                            <small class="text-muted float-right">
-                                <button type="button" class="btn btn-sm btn-outline-success">
-                                    <i class="far fa-comment"></i>Yorumlar
-                                </button>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt=""></a>
-                        <div class="card-header">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Sit amet, consectetur.
-                                </a>
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <i class="fas fa-user"></i> baris.ozen
-                                </li>
-                                <li><i class="fas fa-clock"></i> 03.05.2019 22:12</li>
-                            </ul>
-                            <hr />
-
-                            <p class="card-text">
-                                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted float-left">
-                                <button type="button" class="btn btn-sm btn-outline-danger">
-                                    <i class="far fa-star"></i> <span class="badge badge-light">4</span>
-                                </button>
-                            </small>
-                            <small class="text-muted float-right">
-                                <button type="button" class="btn btn-sm btn-outline-success">
-                                    <i class="far fa-comment"></i>Yorumlar
-                                </button>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt=""></a>
-                        <div class="card-header">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Sit amet, consectetur.
-                                </a>
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <i class="fas fa-user"></i> baris.ozen
-                                </li>
-                                <li><i class="fas fa-clock"></i> 03.05.2019 22:12</li>
-                            </ul>
-                            <hr />
-
-                            <p class="card-text">
-                                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted float-left">
-                                <button type="button" class="btn btn-sm btn-outline-danger">
-                                    <i class="far fa-star"></i> <span class="badge badge-light">4</span>
-                                </button>
-                            </small>
-                            <small class="text-muted float-right">
-                                <button type="button" class="btn btn-sm btn-outline-success">
-                                    <i class="far fa-comment"></i>Yorumlar
-                                </button>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt=""></a>
-                        <div class="card-header">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Sit amet, consectetur.
-                                </a>
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <i class="fas fa-user"></i> baris.ozen
-                                </li>
-                                <li><i class="fas fa-clock"></i> 03.05.2019 22:12</li>
-                            </ul>
-                            <hr />
-
-                            <p class="card-text">
-                                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted float-left">
-                                <button type="button" class="btn btn-sm btn-outline-danger">
-                                    <i class="far fa-star"></i> <span class="badge badge-light">4</span>
-                                </button>
-                            </small>
-                            <small class="text-muted float-right">
-                                <button type="button" class="btn btn-sm btn-outline-success">
-                                    <i class="far fa-comment"></i>Yorumlar
-                                </button>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt=""></a>
-                        <div class="card-header">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Sit amet, consectetur.
-                                </a>
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <i class="fas fa-user"></i> baris.ozen
-                                </li>
-                                <li><i class="fas fa-clock"></i> 03.05.2019 22:12</li>
-                            </ul>
-                            <hr />
-
-                            <p class="card-text">
-                                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted float-left">
-                                <button type="button" class="btn btn-sm btn-outline-danger">
-                                    <i class="far fa-star"></i> <span class="badge badge-light">4</span>
-                                </button>
-                            </small>
-                            <small class="text-muted float-right">
-                                <button type="button" class="btn btn-sm btn-outline-success">
-                                    <i class="far fa-comment"></i>Yorumlar
-                                </button>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt=""></a>
-                    <div class="card-header">
-                        <h4 class="card-title">
-                            <a href="#">
-                                Sit amet, consectetur.
-                            </a>
-                        </h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li>
-                                <i class="fas fa-user"></i> baris.ozen
-                            </li>
-                            <li><i class="fas fa-clock"></i> 03.05.2019 22:12</li>
-                        </ul>
-                        <hr />
-
-                        <p class="card-text">
-                            Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted float-left">
-                            <button type="button" class="btn btn-sm btn-outline-danger">
-                                <i class="far fa-star"></i> <span class="badge badge-light">4</span>
-                            </button>
-                        </small>
-                        <small class="text-muted float-right">
-                            <button type="button" class="btn btn-sm btn-outline-success">
-                                <i class="far fa-comment"></i>Yorumlar
-                            </button>
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-            </div>
+         @Html.Partial("_PartialNote")
 
             <!-- /.row -->
         </div>
         <!-- /.col-lg-9 -->
     </div>
-    <!-- /.row -->
+<!-- /.row -->
 </div>
 <!-- /.container -->

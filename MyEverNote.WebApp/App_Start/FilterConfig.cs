@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace MyEverNote.WebApp 
+namespace MyEverNote.WebApp
 {
     public class FilterConfig
     {

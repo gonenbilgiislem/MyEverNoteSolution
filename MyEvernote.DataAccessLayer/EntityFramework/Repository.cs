@@ -3,30 +3,25 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using MyEvernote.DataAccessLayer;
+using MyEvernote.DataAccessLayer.Abstract;
 
-namespace MyEvernote.BusinessLayer
+namespace MyEvernote.DataAccessLayer.EntityFramework
 {
-    public class Repository<T> where T:class
+    public class Repository<T> : RepositoryBase, IRepository<T> where T : class
     {
-
-        private readonly DatabaseContext _db = new DatabaseContext();
         private readonly DbSet<T> _objectSet;
-        
 
         public Repository()
         {
-            _objectSet = _db.Set<T>();
+            _objectSet = context.Set<T>();
         }
 
-        public IEnumerable<T> List()
+        public IEnumerable<T> IeEnumerableList()
         {
             return _objectSet.ToList();
         }
 
-        public List<T> List(Expression<Func<T,bool>> where)
+        public List<T> List(Expression<Func<T, bool>> where)
         {
             return _objectSet.Where(where).ToList();
         }
@@ -34,26 +29,27 @@ namespace MyEvernote.BusinessLayer
         public int Insert(T obj)
         {
             //_objectSet.Add(obj);
-            _db.Entry(obj).State = EntityState.Added;
-            
+            context.Entry(obj).State = EntityState.Added;
+
             return Save();
         }
 
         public int Update(T obj)
         {
-            _db.Entry(obj).State = EntityState.Modified;
-           return Save();
+            context.Entry(obj).State = EntityState.Modified;
+            return Save();
         }
 
         public int Delete(T obj)
         {
-            //_objectSet.Remove(obj);
+            // _objectSet.Remove(obj);
+            context.Entry(obj).State = EntityState.Deleted;
             return Save();
         }
 
-        private int Save()
+        public int Save()
         {
-            return _db.SaveChanges();
+            return context.SaveChanges();
         }
 
         public T Find(Expression<Func<T, bool>> where)

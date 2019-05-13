@@ -27,16 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-left">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">
                             <i class="fas fa-home"></i> Ana Sayfa
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-wrench"></i>  Yönetim</a>
+                        <a class="nav-link" href="#"><i class="fas fa-wrench"></i> Yönetim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-star"></i>  En Beğenilenler</a>
+                        <a class="nav-link" href="#"><i class="fas fa-star"></i> En Beğenilenler</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -85,7 +85,7 @@
             </div>
         </div>
     </nav>
-        @RenderBody();
+    @RenderBody();
 
     <!-- Footer -->
     <footer class="py-5 bg-dark text-center text-white">
@@ -101,14 +101,13 @@
                     <p class="m-0 text-center text-white">
                         Amet, consectetur adipiscing elit.
                     </p>
-                    
-                        <a class="nav-link text-white text-center" href="#"><i class="fas fa-star"></i>  En Beğenilenler</a>
-                  
-                        <a class="nav-link text-white text-center" href="#">
-                            <i class="fas fa-list-ul"></i>
-                            Son Yazılanlar
-                        </a>
-                  
+
+                    <a class="nav-link text-white text-center" href="#"><i class="fas fa-star"></i> En Beğenilenler</a>
+
+                    <a class="nav-link text-white text-center" href="#">
+                        <i class="fas fa-list-ul"></i>
+                        Son Yazılanlar
+                    </a>
                 </div>
                 <div class="col-lg-4">
                     <h5>
@@ -126,17 +125,14 @@
                         </strong>
                     </h5>
                     <p class="m-0 text-left text-white">
-                   Bülten Aboneliği için aşağıdaki kutuya eposta adresinizi giriniz.!
-                    
-                            <form class="form-inline">
-                                <label class="sr-only" for="inlineFormInputName2">Name</label>
-                                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e-posta adresini giriniz">
+                        Bülten Aboneliği için aşağıdaki kutuya eposta adresinizi giriniz.!
 
-                                <button type="submit" class="btn btn-primary mb-2">Gönder</button>
-                            </form>
-                    
-                    
+                        <form class="form-inline">
+                            <label class="sr-only" for="inlineFormInputName2">Name</label>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e-posta adresini giriniz">
 
+                            <button type="submit" class="btn btn-primary mb-2">Gönder</button>
+                        </form>
                 </div>
             </div>
         </div>
@@ -145,6 +141,6 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("scripts", false)
 </body>
 </html>
