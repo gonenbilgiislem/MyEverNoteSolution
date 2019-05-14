@@ -6,7 +6,7 @@ namespace MyEvernote.DataAccessLayer.Abstract
 {
     public interface IRepository<T>
     {
-        IEnumerable<T> IeEnumerableList();
+        List<T> List();
 
         List<T> List(Expression<Func<T, bool>> where);
 

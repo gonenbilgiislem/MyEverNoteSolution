@@ -7,10 +7,10 @@ namespace MyEvernote.Entities
     [Table("Categories")]
     public class Category : MyEntityBase
     {
-        public Category()
-        {
-            Notes = new List<Note>();
-        }
+        //public Category()
+        //{
+        //    Notes = new List<Note>();
+        //}
 
         [Required] [StringLength(50)] public string Title { get; set; }
 

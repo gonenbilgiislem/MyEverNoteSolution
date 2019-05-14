@@ -7,11 +7,11 @@ namespace MyEvernote.Entities
     [Table("Notes")]
     public class Note : MyEntityBase
     {
-        public Note()
-        {
-            Comments = new List<Comment>();
-            Likes = new List<Liked>();
-        }
+        //public Note()
+        //{
+        //    Comments = new List<Comment>();
+        //    Likes = new List<Liked>();
+        //}
 
         [Required] [StringLength(60)] public string Title { get; set; }
 

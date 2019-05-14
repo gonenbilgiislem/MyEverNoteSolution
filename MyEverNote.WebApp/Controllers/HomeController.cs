@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using MyEvernote.BusinessLayer;
 
 namespace MyEverNote.WebApp.Controllers
@@ -10,7 +11,7 @@ namespace MyEverNote.WebApp.Controllers
         {
             NoteManager nm = new NoteManager();
             
-          return View(nm.GetAllNotes());
+          return View(nm.GetAllNotes().OrderByDescending(x=>x.ModifiedOn));
         }
     }
 }

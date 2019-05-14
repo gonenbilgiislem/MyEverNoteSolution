@@ -8,7 +8,7 @@ namespace MyEvernote.DataAccessLayer.EntityFramework
         public DatabaseContext()
             : base("name=SqlserverConnection")
         {
-            Database.SetInitializer(new MyInitializer());
+            //Database.SetInitializer(new MyInitializer());
         }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)

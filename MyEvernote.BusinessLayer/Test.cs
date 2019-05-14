@@ -13,7 +13,7 @@ namespace MyEvernote.BusinessLayer
 
         public Test()
         {
-            var asd = repo_category.IeEnumerableList();
+            var asd = repo_category.List();
         }
 
         public void Inserttest()

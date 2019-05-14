@@ -16,7 +16,7 @@ namespace MyEvernote.DataAccessLayer.EntityFramework
             _objectSet = context.Set<T>();
         }
 
-        public IEnumerable<T> IeEnumerableList()
+        public List<T> List()
         {
             return _objectSet.ToList();
         }

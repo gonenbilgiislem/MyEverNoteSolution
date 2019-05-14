@@ -10,7 +10,7 @@ namespace MyEvernote.BusinessLayer
 
         public IEnumerable<Category> GetCategories()
         {
-            return _repository.IeEnumerableList();
+            return _repository.List();
         }
 
         public Category GetCategoryById(int id)

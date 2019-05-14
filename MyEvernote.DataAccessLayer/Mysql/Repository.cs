@@ -7,7 +7,7 @@ namespace MyEvernote.DataAccessLayer.Mysql
 {
     public class Repository<T> : RepositoryBase, IRepository<T> where T : class
     {
-        IEnumerable<T> IRepository<T>.IeEnumerableList()
+        public List<T> List()
         {
             throw new NotImplementedException();
         }

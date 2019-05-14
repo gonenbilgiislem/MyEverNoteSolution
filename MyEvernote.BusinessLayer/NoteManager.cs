@@ -13,9 +13,9 @@ namespace MyEvernote.BusinessLayer
     {
         private readonly Repository<Note> _repoNote = new Repository<Note>();
 
-        public IEnumerable<Note> GetAllNotes()
+        public List<Note> GetAllNotes()
         {
-            return _repoNote.IeEnumerableList();
+            return _repoNote.List();
         }
     }
 }
