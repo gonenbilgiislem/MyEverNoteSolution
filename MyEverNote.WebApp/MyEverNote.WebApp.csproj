@@ -225,6 +225,7 @@
     <Content Include="Views\Shared\_PartialCategories.cshtml" />
     <Content Include="Views\Category\Select.cshtml" />
     <Content Include="Views\Shared\_PartialNote.cshtml" />
+    <Content Include="Sifre.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
