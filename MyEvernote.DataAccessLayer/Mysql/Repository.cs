@@ -1,6 +1,7 @@
 ﻿using MyEvernote.DataAccessLayer.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace MyEvernote.DataAccessLayer.Mysql
@@ -38,6 +39,11 @@ namespace MyEvernote.DataAccessLayer.Mysql
         }
 
         public T Find(Expression<Func<T, bool>> @where)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<T> ListQueryable()
         {
             throw new NotImplementedException();
         }

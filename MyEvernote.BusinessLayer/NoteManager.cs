@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections;
+﻿using MyEvernote.DataAccessLayer.EntityFramework;
+using MyEvernote.Entities;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MyEvernote.DataAccessLayer.EntityFramework;
-using MyEvernote.Entities;
 
 namespace MyEvernote.BusinessLayer
 {
     public class NoteManager
     {
-        private readonly Repository<Note> _repoNote = new Repository<Note>();
+        private Repository<Note> _repo_note = new Repository<Note>();
 
         public List<Note> GetAllNotes()
         {
-            return _repoNote.List();
+            return _repo_note.List();
+        }  
+        
+        public IQueryable<Note> GetAllNotesQueryable()
+        {
+            return _repo_note.ListQueryable();
         }
     }
 }
