@@ -1,0 +1,67 @@
+﻿@model IEnumerable<MyEvernote.Entities.Note>
+
+@{
+    var note_title_length = 13;
+    int note_text_length = 70;
+}
+
+<div class="row">
+    @foreach (var Note in Model)
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="#">
+                    <img class="card-img-top" src="https://d4f29v9wclo2e.cloudfront.net/wp/wp-content/uploads/2018/06/best-instrument-patch-cable.jpg" alt="@Note.Title">
+                </a>
+                <div class="card-header">
+                    <h4 class="card-title">
+                        <a href="@Url.Action("Detail","Note",new{id = Note.Id})">
+                            @if (string.IsNullOrEmpty(Note.Title) == false && Note.Title.Length > note_title_length)
+                            {
+                                @(Note.Title.Substring(0, note_title_length) + "...")
+
+                            }
+                            else
+                            {
+                                @Note.Title
+                            }
+                        </a>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fas fa-user"></i> @Note.ModifiedUsername
+                        </li>
+                        <li><i class="fas fa-clock"></i> @Note.ModifiedOn.ToString("g")</li>
+                    </ul>
+                    <hr />
+
+                    <p class="card-text">
+                        @if (string.IsNullOrEmpty(Note.Text) == false && Note.Text.Length > note_text_length)
+                        {
+                            @(Note.Text.Substring(0, note_text_length) + "...")
+                            <a href="#description" class="btn  btn-outline-info btn-sm fa-pull-right">more</a>
+                        }
+                        else
+                        {
+                            @Note.Text
+                        }
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted float-left">
+                        <button type="button" class="btn btn-sm btn-outline-danger">
+                            <i class="far fa-star"></i> <span class="badge badge-light">@Note.LikeCount</span>
+                        </button>
+                    </small>
+                    <small class="text-muted float-right">
+                        <button type="button" class="btn btn-sm btn-outline-success">
+                            <i class="far fa-comment"></i>Yorumlar
+                        </button>
+                    </small>
+                </div>
+            </div>
+        </div>
+    }
+</div>
