@@ -12,7 +12,7 @@
 
     @foreach (var category in list)
     {
-        <a href="@Url.Action("Select","Category",new {id = category.Id})" title="@category.Description" class="list-group-item"><i class="fas fa-hand-point-right"></i> @category.Title</a>
+        <a href="@Url.Action("ByCategory","Home",new {id = category.Id})" title="@category.Description" class="list-group-item"><i class="fas fa-hand-point-right"></i> @category.Title</a>
 
     }
 </div>

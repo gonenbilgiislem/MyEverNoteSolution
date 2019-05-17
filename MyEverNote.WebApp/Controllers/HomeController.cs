@@ -1,5 +1,4 @@
 ﻿using MyEvernote.BusinessLayer;
-using MyEvernote.Entities;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -13,7 +12,7 @@ namespace MyEverNote.WebApp.Controllers
         {
             NoteManager nm = new NoteManager();
 
-          //  return View(nm.GetAllNotes().OrderByDescending(x => x.ModifiedOn));
+            //  return View(nm.GetAllNotes().OrderByDescending(x => x.ModifiedOn));
             return View(nm.GetAllNotesQueryable().OrderByDescending(x => x.ModifiedOn).ToList());
         }
 
@@ -23,6 +22,7 @@ namespace MyEverNote.WebApp.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             var noteManager = new CategoryManager();
             var cat = noteManager.GetCategoryById(id.Value);
             if (cat == null)
@@ -30,7 +30,18 @@ namespace MyEverNote.WebApp.Controllers
                 return HttpNotFound();
             }
 
-            return View($"Index",cat.Notes);
+            return View($"Index", cat.Notes);
+        }
+
+        public ActionResult MostLiked()
+        {
+            NoteManager nm = new NoteManager();
+            return View("Index", nm.GetAllNotesQueryable().OrderByDescending(x => x.LikeCount).ToList());
+        }
+
+        public ActionResult Hakkimizda()
+        {
+            return View();
         }
     }
 }

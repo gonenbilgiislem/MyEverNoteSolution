@@ -226,6 +226,7 @@
     <Content Include="Views\Category\Select.cshtml" />
     <Content Include="Views\Shared\_PartialNote.cshtml" />
     <Content Include="Sifre.config" />
+    <Content Include="Views\Home\Hakkimizda.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
