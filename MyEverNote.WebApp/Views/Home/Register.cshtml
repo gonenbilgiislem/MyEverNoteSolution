@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Kayıt";
+}
+
+@using MyEverNote.WebApp.ViewModels
+@model RegisterViewModel
+
+<br><br><br>
+<br />
+
+
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row">
+
+            <aside class="col-lg-4 offset-lg-4">
+
+                <div class="card">
+                    <article class="card-body">
+                        <h4 class="card-title text-center mb-4 mt-1">Kayıt</h4>
+                        <hr>
+                        <p class="text-success text-center">
+                            @Html.ValidationSummary(false)
+                        </p>
+                        <form>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                             <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    @Html.TextBoxFor(x => x.Username, htmlAttributes: new { @class = "form-control", placeholder = "Kullanıcı Adınız" })
+                                </div>
+                            </div>
+                            <!-- form-group// -->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-at"></i>
+                                        </span>
+                                    </div>
+                                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Email Adresiniz" })
+                                </div>
+                            </div>
+                            <!-- form-group// -->
+                            <!-- form-group// -->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                    </div>
+                                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "Şifreniz", type = "password" })
+                                </div>
+                            </div>
+                            <!-- form-group// -->
+                            <!-- form-group// -->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                    </div>
+                                    @Html.TextBoxFor(x => x.RePassword, new { @class = "form-control", placeholder = "Şifreniz Tekrar", type = "password" })
+                                </div>
+                            </div>
+                            <!-- form-group// -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block"> Kayıt  </button>
+                            </div> <!-- form-group// -->
+                            <p class="text-center"><a href="#" class="btn">Şifremi Unuttum ?</a></p>
+                        </form>
+                    </article>
+                </div> <!-- card.// -->
+            </aside> <!-- col.// -->
+        </div> <!-- row.// -->
+    </div>
+
+}
+<!--container end.//-->
+<br><br><br>
+<script>
+    $(function () {
+        $("#baris").hide();
+    });
+</script>

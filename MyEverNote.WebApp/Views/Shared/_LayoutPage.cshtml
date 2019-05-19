@@ -3,17 +3,19 @@
 <html lang="tr">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Evernote Application</title>
+    <title>@ViewBag.Title - My Evernote Application</title>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-</head>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", false)
+    </head>
 
 <body>
 
@@ -70,19 +72,19 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Home/Login">
                             <i class="fas fa-sign-in-alt"></i>
                             Giriş
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Home/Register">
                             <i class="fas fa-user-plus"></i>
                             Üye Ol
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Home/Logout">
                             Çıkış
                             <i class="fas fa-sign-out-alt"></i>
                         </a>
@@ -94,7 +96,7 @@
     @RenderBody();
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark text-center text-white">
+    <footer class="py-5 bg-dark text-center text-white" id="baris">
 
         <div class="container">
             <div class="row">
@@ -145,8 +147,6 @@
         <!-- /.container -->
     </footer>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", false)
+   
 </body>
 </html>

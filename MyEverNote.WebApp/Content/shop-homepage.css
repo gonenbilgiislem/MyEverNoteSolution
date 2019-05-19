@@ -4,4 +4,14 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 body { padding-top: 56px; }
+.validation-summary-errors {
+    border: 2px dotted #a94442;
+    background-color: #d76663;
+    border-radius: 8px;
+}
 
+.validation-summary-errors ul {
+    list-style-type: none;
+    padding: 10px;
+    color: white;
+}
