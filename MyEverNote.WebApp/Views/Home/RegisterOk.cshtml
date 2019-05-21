@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "RegisterOk";
+}
+
+<br /><br /><br /><br />
+
+<div class="container">
+    <div class="row">
+        <aside class="col-lg-6 offset-lg-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">
+                    <h2 class="text-center">
+                        Yönlendiriliyorsunuz..
+                    </h2>
+                </div>
+                <div class="card-body bg-white text-center">
+                    <h2 class="card-title text-info">
+                        <i class="fas fa-check"></i> Kayıt Oldunuz
+                    </h2>
+                    <hr />
+                    <p class="card-text text-info text-center bg-white">
+                        Lütfen E-Posta adresine gönderdiğimiz aktivasyon linkine tıklayarak hesabınızı aktive ediniz.Hesabınızı aktive etmeden not ekleyemez ve beğenme yapamassınız.
+                    </p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#baris").hide();
+        setTimeout(function () {
+            window.location = "/Home/Index";
+        },
+            3000);
+    });
+</script>

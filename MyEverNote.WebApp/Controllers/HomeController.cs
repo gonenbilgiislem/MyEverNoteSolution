@@ -1,9 +1,9 @@
-﻿using System;
-using MyEvernote.BusinessLayer;
+﻿using MyEvernote.BusinessLayer;
+using MyEverNote.WebApp.ViewModels;
+using System;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using MyEverNote.WebApp.ViewModels;
 
 namespace MyEverNote.WebApp.Controllers
 {
@@ -69,24 +69,32 @@ namespace MyEverNote.WebApp.Controllers
             // Note : Kullanıcı E-Posta kontrolü
             if (ModelState.IsValid)
             {
-                bool hasError = false;
                 if (model.Username == "aaa")
                 {
-                    ModelState.AddModelError("","Kullanıcı adı kullanılıyor");
-                    hasError = true;
+                    ModelState.AddModelError("", "Kullanıcı adı kullanılıyor");
                 }
 
                 if (model.Email == "aaa@aaa.com")
                 {
-                    ModelState.AddModelError("","E-Posta adresi kullanılıyor");
-                    hasError = true;
+                    ModelState.AddModelError("", "E-Posta adresi kullanılıyor");
                 }
 
-                if (hasError)
-                    return View(model);
+                foreach (var item in ModelState)
+                {
+                    if (item.Value.Errors.Count > 0)
+                    {
+                        return View(model);
+                    }
+                }
+
                 return RedirectToAction("RegisterOk");
             }
 
+            return View();
+        }
+
+        public ActionResult RegisterOk()
+        {
             return View();
         }
 
